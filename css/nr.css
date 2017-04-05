@@ -1,0 +1,1313 @@
+/* PRINT STYLESHEET
+- Adds text header
+- Removes background
+- Sets margins
+- Tries to improve display of images without URL
+*/
+#print-header
+{
+    display: none;
+    visibility: hidden;
+    padding: 20px;
+    margin: 0 auto;
+    width: auto;
+}
+#print-header img
+{
+    width: 30%;
+    max-width: 250px;
+    padding: 0 20px 0 0;
+    margin: 0;
+    vertical-align: middle
+}
+#print-header div.print-text
+{
+    width: auto;
+    text-align: left;
+    display: inline-block;
+    padding: 25px
+}
+#print-header p.print-title
+{
+    font-size: 1.9em;
+    margin-bottom: 0
+}
+#print-header p.print-subhead
+{
+    font-size: .9em;
+    margin-top: 0;
+    padding-top: 0
+}
+#print-header p.print-subhead,
+#print-header p.print-title
+{
+    font-family: 'Titillium Web', Arial Narrow, Arial, sans-serif;
+    line-height: 1;
+    color: #000;
+}
+
+@media print {
+    blockquote,
+    img,
+    pre,
+    tr
+    {
+        page-break-inside: avoid
+    }
+    *
+    {
+        background: 0 0!important;
+        color: #000!important;
+        box-shadow: none!important;
+        text-shadow: none!important;
+        filter: none!important;
+        -ms-filter: none!important
+    }
+    a,
+    a:visited
+    {
+        text-decoration: underline;
+        border-bottom: 0;
+        box-shadow: none
+    }
+    a[href]:after
+    {
+        content: " (" attr(href) ")"
+    }
+    abbr[title]:after
+    {
+        content: " (" attr(title) ")"
+    }
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after
+    {
+        content: ""
+    }
+    blockquote,
+    pre
+    {
+        border: 1px solid #999
+    }
+    table
+    {
+        display: table-header-group
+    }
+    img
+    {
+        max-width: 100%!important
+    }
+    #print-header
+    {
+        display: block!important;
+        visibility: visible;
+    }
+    nav
+    {
+        display: none!important
+    }
+    #content-container
+    {
+        margin-top: 10px!important;
+        width: 100%;
+    }
+    #view-pdf,
+    .showhide-control
+    {
+        display: none;
+    }
+    div#meta-secondary
+    {
+        border: 1px solid #000;
+    }
+    #transcript
+    {
+        display: block!important;
+    }
+}
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary
+{
+    display: block
+}
+audio,
+canvas,
+progress,
+video
+{
+    display: inline-block;
+    vertical-align: baseline
+}
+audio:not([controls])
+{
+    display: none;
+    height: 0
+}
+[hidden],
+template
+{
+    display: none
+}
+a
+{
+    background-color: transparent;
+    text-decoration: none
+}
+a:active,
+a:hover
+{
+    outline: 0
+}
+abbr[title]
+{
+    border-bottom: 1px dotted
+}
+b,
+optgroup,
+strong
+{
+    font-weight: 700
+}
+dfn
+{
+    font-style: italic
+}
+h1
+{
+    font-size: 2em;
+    margin: .67em 0
+}
+mark
+{
+    background: #ff0;
+    color: #000
+}
+small
+{
+    font-size: 80%
+}
+sub,
+sup
+{
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline
+}
+sup
+{
+    top: -.5em
+}
+sub
+{
+    bottom: -.25em
+}
+img
+{
+    border: 0
+}
+svg:not(:root)
+{
+    overflow: hidden
+}
+figure
+{
+    margin: 1em 40px
+}
+hr
+{
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0
+}
+pre,
+textarea
+{
+    overflow: auto
+}
+code,
+kbd,
+pre,
+samp
+{
+    font-family: monospace, monospace;
+    font-size: 1em
+}
+button,
+input,
+optgroup,
+select,
+textarea
+{
+    color: rgba(13,108,145,1);
+    font: inherit;
+    margin: 0
+}
+button
+{
+    overflow: visible
+}
+button,
+select
+{
+    text-transform: none
+}
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit]
+{
+    -webkit-appearance: none;
+    cursor: pointer;
+    -moz-appearance: none
+}
+button[disabled],
+html input[disabled]
+{
+    cursor: default
+}
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border:0;
+    padding:0
+}
+input
+{
+    line-height: normal
+}
+input[type=checkbox],
+input[type=radio]
+{
+    box-sizing: border-box;
+    padding: 0
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    height:auto
+}
+input[type=search]
+{
+    -webkit-appearance: none!important;
+    border-radius: 0
+}
+.sr-only,
+legend
+{
+    padding: 0;
+    border: 0
+}
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration, input[type=search]::-webkit-search-results-button, input[type=search]::-webkit-search-results-decoration {
+    -webkit-appearance:none
+}
+table
+{
+    border-collapse: collapse;
+    border-spacing: 0
+}
+td,
+th
+{
+    padding: 0
+}
+.sr-only
+{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0)
+}
+.show-label+.hidden
+{
+    visibility: hidden
+}
+.clearfix:after,
+.clearfix:before
+{
+    content: "";
+    display: table
+}
+.clearfix:after
+{
+    clear: both
+}
+html
+{
+    font-size: 100%;
+    overflow-y: auto;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+body
+{
+    margin: 0;
+    font-size: normal 100%;
+    height: 100%;
+    line-height: 1.5em;
+    font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
+}
+::selection
+{
+    text-shadow: none;
+    background-color: #bcbc29;
+    color: #0d6c91;
+}
+/*
+Primary Layout Areas
+*/
+#primary-container
+{
+    background-color: #ffffea;
+    margin: 0 auto;
+    width: 100%;
+}
+#content-container
+{
+    display: block;
+    height: auto;
+    margin-top: 115px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0;
+    max-width: 1200px;
+    min-width: 0;
+    padding: 0 20px;
+    width: auto;
+    clear: both;
+}
+#main-content
+{
+    float: left;
+    height: auto;
+    top: 0;
+    width: 60%;
+    padding-right: 5%;
+}
+#sidebar
+{
+    clear: none;
+    float: right;
+    height: auto;
+    margin: 0;
+    width: 35%;
+}
+#lower-content,
+#top-content-container
+{
+    width: 100%;
+    display: block;
+    clear: both;
+    padding: 0;
+}
+#abstract,
+#transcript-container,
+#meta-primary,
+#interviewee-data,
+#player-container
+{
+    height: auto;
+    width: 100%;
+}
+#meta-secondary
+{
+    background-color: #D1D8D5;
+    height: auto;
+    clear: both;
+    margin: 20px auto;
+    width: auto;
+}
+#audio-player
+{
+    /* TBD */
+}
+#view-pdf
+{
+    width: 35%;
+    float: right;
+    padding: 0;
+    margin-top: 20px;
+}
+/*
+TEXT AND OTHER GENERAL STYLES
+*/
+p {
+    font-family: 'Titillium Web', Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+h1
+{
+    color: #0f6c91;
+    font-family: 'Homenaje', Arial Narrow, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+ /*   font-size: 4em;
+    line-height: 0.8em;*/
+    text-align: left;
+    text-transform: uppercase;
+}
+h2
+{
+    clear: both;
+    color: #7E9088;
+    display: block;
+    float: left;
+    font-family: 'Titillium Web', Arial, sans-serif;
+    font-size: 2em;
+    font-weight: 700;
+    height: auto;
+    letter-spacing: normal;
+    line-height: 0.9;
+    margin: 10px 0 5px;
+    min-height: 0;
+    padding: 0;
+    text-align: left;
+    text-transform: uppercase;
+    width: 100%;
+}
+h3
+{
+    clear: both;
+    color: #0f6c91;
+    display: block;
+    float: left;
+    font-family: 'Titillium Web', Arial, sans-serif;
+    font-size: 1.6em;
+    font-weight: 700;
+    height: auto;
+    letter-spacing: normal;
+    line-height: 0.9;
+    margin: 10px 0 5px;
+    min-height: 0;
+    padding: 0;
+    text-align: left;
+    text-transform: uppercase;
+    width: 100%;
+}
+h4
+{
+    clear: both;
+    color: #7E9088;
+    display: block;
+    float: left;
+    font-family: 'Titillium Web', Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+    height: auto;
+    letter-spacing: normal;
+    line-height: 0.9;
+    margin: 10px 0 5px;
+    min-height: 0;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+h5
+{
+    clear: both;
+    color: #7E9088;
+    display: block;
+    float: left;
+    font-family: 'Titillium Web', Arial, sans-serif;
+    font-size: 1.2em;
+    font-weight: 700;
+    height: auto;
+    letter-spacing: normal;
+    line-height: 0.9;
+    margin: 10px 0 5px;
+    min-height: 0;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+h6
+{
+    clear: both;
+    color: #7E9088;
+    display: block;
+    float: left;
+    font-family: 'Titillium Web', Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    height: auto;
+    letter-spacing: normal;
+    line-height: 0.9;
+    margin: 10px 0 5px;
+    min-height: 0;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+a
+{
+  /*  color: inherit; */
+    border-bottom: 1px solid #D1D8D5;
+    -webkit-box-shadow: inset 0 -5px #D1D8D5;
+    -mox-box-shadow: inset 0 -5px #D1D8D5;
+    box-shadow: inset 0 -5px #D1D8D5;
+    text-transform: none;
+    text-decoration: none;
+}
+a:hover
+{
+    color: inherit;
+    -webkit-box-shadow: inset 0 -18px rgba(188,188,41,0.75);
+    -moz-box-shadow: inset 0 -18px rgba(188,188,41,0.75);
+    box-shadow: inset 0 -18px rgba(188,188,41,0.75);
+}
+a:visited
+{
+  /*  color: inherit; */
+    border-bottom: 1px solid #D1D8D5;
+    -webkit-box-shadow: inset 0 -3px #D1D8D5;
+    -mox-box-shadow: inset 0 -3px #D1D8D5;
+    box-shadow: inset 0 -3px #D1D8D5;
+}
+/* clear style from areas with with custom 'a' styles */
+a img,
+.metadata a,
+#footer-container a,
+a:hover img,
+.metadata a:hover,
+a:visited img,
+.metadata a:visited,
+div.navbar-header a,
+div.navbar-header a:hover,
+div.navbar-header a:visited,
+nav a,
+nav a:visited,
+nav a:hover
+{
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    text-decoration: inherit;
+}
+.hidden
+{
+    display: none!important
+}
+.show-label
+{
+    display: inline
+}
+.showhide-control
+{
+    background-color: #7E9088;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    color: #FFFFEA;
+    display: inline-block;
+    font-family: 'Homenaje', Arial Narrow, Arial, sans-serif;
+    font-size: 1.3em;
+    padding: 3px;
+    text-transform: uppercase;
+    border: none;
+    clear: none;
+}
+.showhide-control:hover
+{
+    background-color: #BCBC29;
+    color: #FFFFEA;
+}
+.showhide-control:active
+{
+    background-color: #7e9088;
+    color: #bcbc29;
+}
+.showhide-control-active
+{
+    color: #FFFFEA;
+    background-color: #BCBC29;
+}
+.showhide-control-active:hover
+{
+    color: #0D6C91;
+    background-color: #BCBC29;
+}
+/* Hover Image Link Fade */
+a img
+{
+    opacity: 1
+}
+a:hover img
+{
+    opacity: 0.65
+}
+a:visited img
+{
+    opacity: 1
+}
+.content-block
+{
+    float: left;
+    padding: 10px;
+    width: 100%;
+}
+.download-button
+{
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    padding: 2%;
+    color: #FFFFEA;
+    font-family: 'Homenaje', Arial Narrow, Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    height: auto;
+    max-width: 400px;
+    line-height: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    background-color: #0F6C91;
+}
+.download-button:hover
+{
+    background-color: #bcbc29;
+    color: #0D6C91;
+}
+/*
+Top Content Area Specific Styles
+*/
+.intro
+{
+    clear: none;
+    float: left;
+    font-family: 'Titillium Web';
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+    height: auto;
+    line-height: 1em;
+    margin: 0 3px;
+    min-height: 0;
+    min-width: 0;
+    padding: 0;
+    text-align: left;
+    text-transform: none;
+    width: 100%;
+}
+#interviewee-name
+{
+    padding: 0;
+    margin: 10px 0;
+}
+#interview-title
+{
+    clear: none;
+    float: left;
+    height: auto;
+    width: 100%;
+}
+#basic-metadata-container
+{
+    clear: both;
+    height: auto;
+    width: 63%;
+}
+/*
+Abstract Specific
+*/
+#show-abstract
+{
+    height: 1.3em;
+    line-height: 1.3em;
+    font-size: 1em;
+    display: inline-block;
+    padding: 0 10px;
+    margin: 0;
+}
+/*
+Transcript Specific Styles
+*/
+#transcript p
+{
+    font-size: .9em;
+    line-height: 2em;
+}
+#transcript-button
+{
+}
+/*
+Individual Map Specific Styles
+*/
+#individual-map
+{
+    clear: none;
+    float: right;
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+}
+.map-image
+{
+    clear: none;
+    color: #000;
+    float: left;
+    height: auto;
+    left: 0;
+    margin: 0;
+    max-width: 100%;
+    position: relative;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+}
+/*
+Metadata Sections Styles
+*/
+.metadata-container
+{
+    clear: none;
+    float: left;
+    height: auto;
+    margin-left: 0;
+    margin-top: 5px;
+    width: 100%;
+}
+.metadata-label
+{
+    clear: none;
+    color: #7e9088;
+    display: block;
+    font-family: 'Titillium Web', Arial, sans-serif;
+    font-size: .8em;
+    font-weight: 400;
+    height: auto;
+    line-height: 1em;
+    margin: 0;
+    min-height: 0;
+    padding: 5px 0 0;
+    text-align: left;
+    text-transform: uppercase;
+    width: 100%;
+}
+.metadata
+{
+    clear: none;
+    nowhitespace: afterproperty;
+    font-family: 'Titillium Web', Arial, sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    height: auto;
+    line-height: 1.2em;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    -ms-word-break: break-all;
+    word-break: break-all; /* Non standard for webkit */
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+.meta-left-col
+{
+    clear: none;
+    float: left;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    width: 50%;
+}
+.meta-right-col
+{
+    clear: none;
+    float: left;
+    height: auto;
+    margin-left: 0;
+    margin-top: 0;
+    width: 50%;
+}
+.meta-span-two-col
+{
+    clear: both;
+    float: left;
+    height: auto;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    width: 100%;
+}
+.meta-top-section
+{
+    clear: both
+}
+.meta-bottom-section
+{
+    clear: both
+}
+.metadata a
+{
+    border-bottom: none;
+    nowhitespace: afterproperty;
+    color: #000000;
+    text-decoration: underline;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.metadata a:hover
+{
+    border-bottom: none;
+    color: #0D6C91;
+    -webkit-box-shadow: inset 0 -18px rgba(188,188,41,0.75);
+    -moz-box-shadow: inset 0 -18px rgba(188,188,41,0.75);
+    box-shadow: inset 0 -18px rgba(188,188,41,0.75);
+}
+/*
+Header Bar Styles - maybe you all will want to scrap my whole header - it's rough. Just want to make sure we turn to easy to click nav with larger buttons as screens get smaller. Also, we may have to accept more traditional search box - I can't get my style overrides to work on mobile chrome fully - the "underline" search box has curves on either end.
+*/
+object.nr-logo
+{
+    display: block;
+    width: 150px;
+}
+object.nr-logo img
+{
+    width: 100%
+}
+input#search-box
+{
+    background-color: #0f6c91;
+    border-bottom: 1px solid #ffffea;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-radius: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-shadow: none;
+    -webkit-box-sizing: border-box;
+    box-shadow: none;
+    box-sizing: border-box;
+    display: inline-block;
+    font-family: 'Titillium Web', Arial Narrow, sans-serif;
+    text-transform: none;
+    font-size: 100%;
+    width: 75%;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    height: 1.5em;
+}
+input#search-box:focus
+{
+    background-color: #ffffea;
+    color: #0f6c91;
+}
+input#search-box:active
+{
+    color: #ffffea
+}
+button#search-go
+{
+    -moz-box-sizing: border-box;
+    -webkit-box-shadow: none;
+    -webkit-box-sizing: border-box;
+    background-color: #7E9088;
+    border: 1px solid #ffffea;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #ffffea;
+    display: inline-block;
+    font-family: homenaje, "Arial Narrow", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    width: 20%;
+    padding: 0;
+    vertical-align: top;
+    height: 1.5em;
+    font-size: 1em;
+}
+button#search-go:hover
+{
+    background-color: #ffffea;
+    border: 1px solid #ffffea;
+    color: #0f6c91;
+    box-sizing: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+button#lang-toggle
+{
+    -moz-box-sizing: border-box;
+    -webkit-box-shadow: none;
+    -webkit-box-sizing: border-box;
+    background-color: #BCBC29;
+    border: 1px solid #FFFFEA;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #0F6C91;
+    display: inline-block;
+    font-family: 'Homenaje', Arial Narrow, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    width: 2em;
+    height: 2em;
+    font-size: 1.2em;
+}
+input#lang-toggle:hover
+{
+    background-color: #bcbc29;
+    border: 1px solid #FFFFEA;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    box-sizing: border-box;
+}
+/*
+Interview Themes Section
+*/
+#themes
+{
+    clear: none;
+    float: left;
+    height: auto;
+    margin: 0;
+    width: 100%;
+}
+#themes-container
+{
+    display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+    display: -ms-flexbox;  /* TWEENER - IE 10 */
+    display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+    display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    width: 100%;
+    clear: both;
+    padding: 0;
+    margin: 0;
+}
+ul#themes-container li
+{
+    list-style-type: none;
+    -webkit-box-flex: 1 0 auto;
+    -moz-box-flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    display: inline-block;
+    height: auto;
+    clear: none;
+    padding: 5px;
+    max-width: 45%;
+}
+a.interview-theme
+{
+    font-family: 'Homenaje', Arial Narrow, Arial, Sans-Serif;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 400;
+    border: 1px solid #0f6c91;
+    color: #0f6c91;
+    box-sizing: border-box;
+    line-height: 1em;
+    margin: 0;
+  /*  height: 100%; */
+    min-height: 15px;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+a:hover.interview-theme
+{
+    background-color: #D1D8D5;
+    color: #0D6C91;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+a:visited.interview-theme
+{
+    border: 1px solid #D1D8D5;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+/*
+Footer Styles and Layout
+*/
+#footer-container
+{
+    background-color: #7e9088;
+    float: none;
+    height: auto;
+    margin: 20px 0 0;
+    min-width: 0;
+    padding: 20px 0;
+    width: 100%;
+    clear: both;
+}
+#footer-inner-container
+{
+    clear: none;
+    float: none;
+    height: auto;
+    margin: 0 auto;
+    max-width: 1200px;
+    min-width: 0;
+    padding: 0 5%;
+    width: auto;
+}
+#footer-logo
+{
+    width: auto;
+    float: left;
+    margin: 0;
+    max-width: 75px;
+    display: inline-block;
+}
+#footer-logo img
+{
+    width: 100%
+}
+#footer-content-container
+{
+    width: auto;
+    padding: 0 0 0 25px;
+    margin: 0;
+    display: inline-block;
+    float: left;
+}
+#footer-unc-logo
+{
+    width: auto;
+    max-width: 225px;
+    padding: 0;
+    display: inline-block;
+    height: auto;
+    vertical-align: top;
+    clear: none;
+    text-align: center;
+    float: right;
+}
+#footer-unc-logo img
+{
+    width: 100%
+}
+#footer-bottom-wide
+{
+    clear: both;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+p.sponsor-intro
+{
+    padding: 0;
+    line-height: 0px;
+}
+p.sponsors
+{
+    font-family: 'Homenaje', "Arial Narrow", Arial, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    line-height: 50%;
+    padding: 0;
+}
+p.sponsors a,
+p.sponsors a:visited
+{
+    color: #ffffea;
+    padding: 0;
+}
+p.sponsors a:hover
+{
+    color: #BDBD29;
+    padding: 0;
+}
+p.copyright
+{
+    font-size: .8em;
+    padding-top: 20px;
+    font-family: 'Titillium Web', Arial, sans-serif;
+}
+
+/* Phablet and smaller screened tablets - nav turns to hamburger, and content moves into a single column layout, but meta-data areas keep two column layout */
+
+@media screen and (max-width:680px) {
+    body
+    {
+        font-size: 110%
+    }
+    #sidebar,
+    #main-content,
+    #top-content-container,
+    #basic-metadata-container,
+    #lower-content
+    {
+        width: 100%;
+        margin: 0 auto;
+        clear: both;
+        padding: 0;
+    }
+    #individual-map
+    {
+        margin-top: 20px
+    }
+    #meta-secondary
+    {
+        padding: 2%;
+        width: 96%;
+    }
+    #primary-container
+    {
+        padding: 0;
+        width: 100%;
+    }
+    #content-container
+    {
+        clear: both;
+        padding: 10px;
+    }
+    #footer-unc-logo,
+    #footer-logo,
+    #footer-content-container
+    {
+        clear: both;
+        margin: 0 auto;
+        padding: 0;
+        float: none;
+        display: block;
+        text-align: center;
+    }
+    .meta-top-section,
+    .meta-bottom-section
+    {
+        clear: none;
+        display: inline-block;
+        width: 50%;
+    }
+    #individual-map
+    {
+        max-height: 300px;
+        overflow: hidden;
+    }
+    .content-block
+    {
+        padding: 0;
+        margin-top: 20px;
+    }
+    #view-pdf
+    {
+        width: 100%
+    }
+    #show-abstract
+    {
+        padding: 0 35px
+    }
+    .download-button
+    {
+        max-width: 100%
+    }
+}
+
+/* for iPhone style devices - all buttons become 100%, they become larger for easier clicking, the meta-data areas that will typically contain longer data become single columns to limit wrapping. .*/
+
+@media screen and (max-width:480px) {
+    body
+    {
+        font-size: 120%
+    }
+    #view-pdf
+    {
+        width: 100%;
+        float: left;
+    }
+    button.download-button
+    {
+        width: 100%;
+        max-width: 100%;
+    }
+    .navbar-right-group
+    {
+        width: 100%;
+        font-size: 130%;
+    }
+    .showhide-control
+    {
+        width: 100%;
+        clear: both;
+        height: 2em;
+    }
+    #show-abstract
+    {
+        line-height: 1.3em;
+        font-size: 1.3em;
+        height: 2em;
+        display: block;
+        padding: 0;
+        margin-top: 10px;
+    }
+    #meta-secondary .meta-left-col,
+    #meta-secondary .meta-right-col,
+    .meta-top-section,
+    .meta-bottom-section
+    {
+        width: 100%;
+        display: block;
+    }
+    h2
+    {
+        font-size: 2.2em;
+    }
+    h3
+    {
+        font-size: 2em
+    }
+    .content-block
+    {
+        padding: 0;
+        margin-top: 20px;
+    }
+    #content-container
+    {
+        padding: 0 10px;
+        clear: both;
+        margin: 115px auto 0 auto;
+    }
+    /* Tried to override some of the bootstrap CSS, but think this is delving into areas i'm not so great at! :) */
+    ul.nav
+    {
+        padding-top: 10px
+    }
+    ul.nav li
+    {
+        font-size: 120%;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #ffffea;
+    }
+}
